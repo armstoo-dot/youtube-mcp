@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.token.json
+tokens/
+client_secret*.json
+quota-ledger.json
+*.tgz

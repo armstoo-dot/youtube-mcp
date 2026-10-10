@@ -1,0 +1,60 @@
+{
+  "name": "youtube-mcp-oauth",
+  "version": "0.2.0",
+  "description": "MCP server for managing YouTube channels (incl. Brand Accounts) via the official YouTube Data API v3 + Analytics API, with OAuth, headless/phone sign-in, quota guard and gated destructive tools.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtube",
+    "youtube-data-api",
+    "youtube-analytics",
+    "oauth",
+    "claude",
+    "cursor"
+  ],
+  "license": "MIT",
+  "author": "Armstrong Kiprotich",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armstoo-dot/youtube-mcp.git"
+  },
+  "homepage": "https://github.com/armstoo-dot/youtube-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/armstoo-dot/youtube-mcp/issues"
+  },
+  "type": "module",
+  "bin": {
+    "youtube-mcp": "dist/index.js",
+    "youtube-mcp-oauth": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    ".env.example"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "start": "node dist/index.js",
+    "auth": "node dist/index.js auth"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "googleapis": "^185.0.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
